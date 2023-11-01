@@ -18,3 +18,10 @@ test('Атака демона на 4 клетки с дурманом', () => {
   expect(resultAttack).toBe(25);
 })
 
+test('Проверка геттера stoned', () => {
+  const darkDaemon = new Daemon('Dark');
+  darkDaemon.stoned = true;
+  const stonedState = darkDaemon.stoned;
+  expect(stonedState).toBe(true);
+})
+
